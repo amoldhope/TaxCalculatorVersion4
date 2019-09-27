@@ -5,7 +5,7 @@ enum TaxSlab {
     FOOD, FURNITURE, ELECTRONIX;
 
 
-    public int getGstSlabs() {
+        public int getGstSlabs() {
         switch (this) {
             case FOOD:
                 return 0;

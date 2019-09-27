@@ -1,6 +1,6 @@
 package main.java;
 
-public class ProductInventory {
+public class ItemInventory {
     private Product product;
     private int quantity;
 
@@ -20,7 +20,7 @@ public class ProductInventory {
         this.quantity = quantity;
     }
 
-    public ProductInventory(Product product, int quantity) {
+    public ItemInventory(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
     }

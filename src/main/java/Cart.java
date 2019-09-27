@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    static List<ProductInventory> items = new ArrayList<>();
+    static List<ItemInventory> items = new ArrayList<>();
 
     public void AddItem(Product newItem) {
-        ProductInventory product = isExist(newItem);
-        if (product == null) {
-            items.add(new ProductInventory(newItem, 1));
+        ItemInventory item = isExist(newItem);
+        if (item == null) {
+            items.add(new ItemInventory(newItem, 1));
             return;
         }
-        product.setQuantity(product.getQuantity() + 1);
+        item.setQuantity(item.getQuantity() + 1);
     }
 
-    private ProductInventory isExist(Product newItem) {
-        for (ProductInventory item : items) {
+    private ItemInventory isExist(Product newItem) {
+        for (ItemInventory item : items) {
             if (item.getProduct().getName().equals(newItem.getName())) {
                 return item;
             }
